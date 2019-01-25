@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+void main()
+{
+     int array1[10][10], array2[10][10];
+    int i, j, m,n;
+
+    printf("Enter the order of the matrix \n");
+    scanf("%d %d", &m, &n);
+    printf("Enter the co-efficents of the matrix \n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            scanf("%d", &array2[i][j]);
+
+
+        }
+    }
+
+    printf("The matrix is \n");
+    for (i = 0; i < m; i++)
+    {
+        for (j = 0; j < n; j++)
+            printf(" %d", array2[i][j]);
+        printf("\n");
+    }
+    for (i = 0; i<m; i++)
+    {
+        for(j=0;j<n ;j++)
+        {
+        if(j%2==0)
+        array1[i][j]=array2[i][j+1];
+        else
+            array1[i][j]=array2[i][j-1];
+          }
+     }
+
+    printf("The new matrix is \n");
+    for (i = 0; i <m; i++)
+    {
+        for (j = 0; j <n; j++)
+            printf(" %d", array1[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
